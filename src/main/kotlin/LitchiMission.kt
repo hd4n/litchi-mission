@@ -40,7 +40,13 @@ class LitchiMission {
         }
 
         val out = File(fn)
-        out.writeText(CSV_HEADER + "\n")
+        // clear the file
+        out.writeText("")
+        if (latLngOnly) {
+            out.writeText("latitude,longitude\n")
+        }else{
+            out.writeText(CSV_HEADER + "\n")
+        }
         out.appendText(waypoints.joinToString(separator = "\n") { if (latLngOnly) it.simpleFormat() else it.extendedFormat() })
         println("Exported '${out.absolutePath}'")
     }
