@@ -5,8 +5,25 @@
 ### Features
 
 - Export flight paths as CSV files that can be imported into the Litchi Mission Hub
-- Validation for waypoint and action properties 
+- Validation for waypoint and action properties
 - Methods for working with coordinates
+
+### [Documentation](documentation.md)
+
+### Usage
+
+build.gradle
+
+```groovy
+repositories {
+    // ...
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.hd4n:litchi-mission:1.0'
+}
+```
 
 ### Example
 
